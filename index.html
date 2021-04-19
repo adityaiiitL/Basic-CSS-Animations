@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .bg {
+        animation: slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+        bottom: 0;
+        left: -50%;
+        opacity: 0.5;
+        position: fixed;
+        right: -50%;
+        top: 0;
+        z-index: -1;
+      }
+
+      .bg2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 4s;
+      }
+
+      .bg3 {
+        animation-duration: 5s;
+      }
+
+      .content {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 0.25em;
+        box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        left: 50%;
+        padding: 10vmin;
+        position: fixed;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      h1 {
+        font-family: monospace;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(-25%);
+        }
+        100% {
+          transform: translateX(25%);
+        }
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: rgb(19, 15, 82);
+      }
+      .nav-bar {
+        display: flex;
+        background-color: orange;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        transition: padding-top 0.2s, padding-bottom 0.2s;
+      }
+      .nav-bar:hover {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+      .nav-items {
+        display: flex;
+        font-size: 22px;
+        font-family: "Raleway", sans-serif;
+      }
+      .home,
+      .about,
+      .view,
+      .contact,
+      .help {
+        transition: font-size 0.5s;
+      }
+      .home:hover,
+      .about:hover,
+      .contact:hover,
+      .help:hover,
+      .view:hover {
+        font-size: 30px;
+      }
+      .search-bar {
+        position: absolute;
+        right: 0px;
+        padding: 20px;
+      }
+      .search-input {
+        width: 200px;
+        height: 24px;
+        font-size: 20px;
+        border-radius: 20px;
+        padding-top: 2px;
+        padding-bottom: 0px;
+        border: black solid 0.5px;
+        transition: box-shadow 0.2s, width 0.2s, height 0.2s;
+      }
+      .search-input:hover {
+        padding: 5px;
+        width: 280px;
+        box-shadow: black 0 0 10px;
+        height: 26px;
+      }
+      .search-button {
+        width: 70px;
+        height: 30px;
+        background-color: rgb(11, 155, 11);
+        font-size: 14px;
+        font-family: "Raleway", sans-serif;
+        color: white;
+        border-radius: 20px;
+        border: black solid 0.5px;
+        transition: box-shadow 0.2s, width 0.2s, height 0.5s;
+      }
+      .search-button:hover {
+        height: 30px;
+        box-shadow: black 0 0 10px;
+        padding: 5px;
+        width: 80px;
+        height: 40px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li,
+      a {
+        padding: 20px;
+        text-decoration: none;
+        color: black;
+        transition: color 0.5s, text-shadow 0.2s;
+      }
+      a:hover {
+        color: white;
+        text-shadow: black 0px 0px 10px;
+      }
+      .container {
+        padding: 40px;
+      }
+      .circle1 {
+        background-color: red;
+        box-shadow: black 0 0 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        padding: 20px;
+        transition: opacity 0.7s, width 0.7s, height 0.7s;
+      }
+      .circle1:hover {
+        opacity: 1;
+        width: 400px;
+        height: 400px;
+      }
+      .circle2 {
+        background-color: rgb(243, 20, 206);
+        box-shadow: black 0 0 5px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        right: 50px;
+        top: 150px;
+        transition: width 1s, height 1s;
+      }
+      .circle2:hover {
+        width: 300px;
+        height: 300px;
+      }
+      .circle3 {
+        background-color: rgb(237, 240, 56);
+        box-shadow: black 0 0 5px;
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        bottom: 60px;
+        left: 45%;
+        -webkit-transition: -webkit-transform 1s;
+      }
+      .circle3:hover {
+        -webkit-transform: rotate(180deg) translateZ(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="nav">
+      <nav class="nav-bar">
+        <ul class="nav-items">
+          <li class="home"><a href="">Home</a></li>
+          <li class="about"><a href="">About</a></li>
+          <li class="view"><a href="">View</a></li>
+          <li class="contact"><a href="">Contact Us</a></li>
+          <li class="help"><a href="">Help</a></li>
+        </ul>
+        <form action="#" class="search-bar">
+          <input type="text" class="search-input" />
+          <button class="search-button">Search</button>
+        </form>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+  </body>
+</html>
